@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Contacto</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="div-logo"><a class="logo" href="../index.html">LOGO</a></div>
+
+      <nav class="header-nav">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+          <li><a href="./carrito.html">Carrito</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <h1>Contacto</h1>
+            <p>Si tienes alguna consulta, no dudes en enviarnos un mensaje a través del siguiente formulario. Estaremos encantados de ayudarte.</p>
+
+        </section>
+
+        <section>
+            <form class="form" action="https://formspree.io/f/xwpnleyj" method="POST">
+                <div class="card-consulta">
+                    <h2>Envianos tu mensaje</h2>
+                    <div>
+                        <label class="form-label">Nombre</label>
+                        <input class="form-input" type="text" name="name" placeholder="Ej. Juan Sanchez"/>
+                    </div>
+
+                    <div>
+                        <label class="form-label">Correo</label>
+                        <input class="form-input" type="email" name="email" placeholder="Ej. juan@email.com"/>
+                    </div>
+
+                    <div>
+                        <label class="form-label">Mensaje</label>
+                        <textarea class="form__textarea" name="message" placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+                    <button class="btn" type="submit">Enviar</button>
+                </div>
+                <!-- Asunto del mail que llega -->
+                <input type="hidden" name="subject" value="Contacto desde el sitio" />
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Nuestra Tienda. Todos los derechos reservados.</p>
+    </footer>
+
+  </body>
+</html>
