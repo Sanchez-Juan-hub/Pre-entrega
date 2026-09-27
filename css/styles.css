@@ -13,7 +13,7 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     background-color: #fff1d5;
-    color: #1e110b;
+    color: #26170b;
 
     display: flex;
     flex-direction: column;
@@ -54,18 +54,18 @@ h2 {
     padding: 1.6rem;
     border-radius: 1rem;
     color: #f1b747;
-    background-color: #1e110b;
+    background-color: #26170b;
 }
 
 .btn:hover {
     cursor: pointer;
     background-color: #f1b747;
-    color: #1e110b;
+    color: #26170b;
 }
 
 header,
 footer {
-    background: #1E110B;
+    background: #26170b;
     color:#f1b747;
     width: 100%;
 
@@ -95,7 +95,7 @@ nav ul {
 nav li:hover {
     cursor: pointer;
     background-color: #f1b747;
-    color: #1e110b;
+    color: #26170b;
 }
 
 img {
