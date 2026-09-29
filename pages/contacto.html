@@ -1,75 +1,75 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="../css/styles.css" />
-    <title>Contacto</title>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 
-  <body>
+        <!-- Enlace a styles en la carpeta css/ -->
+        <link rel="stylesheet" href="../css/styles.css" />
+        <title>Contacto</title>
+    </head>
 
-    <header>
-      <div class="div-logo"><a class="logo" href="../index.html">LOGO</a></div>
+    <body>
+        <header>
+            <div class="div-logo"><a class="logo" href="../index.html">LOGO</a></div>
 
-      <nav class="header-nav">
-        <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="./contacto.html">Contacto</a></li>
-          <li><a href="./carrito.html">Carrito</a></li>
-        </ul>
-      </nav>
-    </header>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="./carrito.html">Carrito</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <main>
-
-        <section>
-            <h1>Contactanos</h1>
-            <p>¿Tienes alguna duda sobre nuestros orígenes de cacao, coberturas o pedidos? Escríbenos y nuestro equipo te responderá a la brevedad.</p>
-        </section>
-
-        <section>
-            <h2>Información de contacto</h2>
-            <p>Teléfono: +54 12 3456 7890</p>
-            <p>Email: info@chocolatespremium.com.ar</p>
-        </section>
-
-        <section>
-          <div class="card-consulta">
-            <h2>Información de contacto</h2>
-            <p>Teléfono: +54 12 3456 7890</p>
-            <p>Email: info@chocolatespremium.com.ar</p>
-          </div>
-            <form class="form" action="https://formspree.io/f/xwpnleyj" method="POST">
-                <div class="card-consulta">
-                    <h2>Envianos tu mensaje</h2>
-                    <div class="form-group">
-                        <label class="form-label">Nombre</label>
-                        <input class="form-input" type="text" name="name" placeholder="Ej. Juan Sanchez"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label">Correo</label>
-                        <input class="form-input" type="email" name="email" placeholder="Ej. juan@email.com"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label">Mensaje</label>
-                        <textarea class="form-textarea" name="message" placeholder="Escribe tu mensaje aquí..."></textarea>
-                    </div>
-                    <button class="btn" type="submit">Enviar</button>
+        <main>
+            <section>
+                <div>
+                    <h1>Contactanos</h1>
+                    <p>¿Tienes alguna duda sobre nuestros orígenes de cacao, coberturas o pedidos? Escríbenos y nuestro equipo te responderá a la brevedad.</p>
                 </div>
-                <!-- Asunto del mail que llega -->
-                <input type="hidden" name="subject" value="Contacto desde el sitio" />
-            </form>
 
-        </section>
-    </main>
+                <div>
+                    <!-- tarjeta 1: informacion de contacto -->
+                    <aside>
+                        <h2>Horario de atención</h2>
+                        <p>Lunes a Viernes: 9:00 - 18:00</p>
+                        <p>Sábados: 10:00 - 14:00</p>
+                        <p>Domingos y feriados: Cerrado</p>
+                    </aside>
+                    
+                    <!-- tarjeta 2: formulario de contacto -->
+                    <section class="card-consulta">
+                        <h2>Envianos tu mensaje</h2>
+                        <form class="form" action="https://formspree.io/f/xwpnleyj" method="POST">
+                            <div class="form-group">
+                                <label class="form-label">Nombre</label>
+                                <input class="form-input" type="text" name="name" placeholder="Ej. Juan Sanchez"/>
+                            </div>
 
-    <footer>
-        <p>© 2026 Tienda de Chocolates Premium. Todos los derechos reservados.</p>
-    </footer>
+                            <div class="form-group">
+                                <label class="form-label">Correo</label>
+                                <input class="form-input" type="email" name="email" placeholder="Ej.juan@gmail.com"/>
+                            </div>
 
-  </body>
+                            <div class="form-group">
+                                <label class="form-label">Mensaje</label>
+                                <textarea class="form-textarea" name="message" placeholder="Escribe tu mensaje aquí..."></textarea>
+                            </div>
+
+                            <button class="form-button" type="submit">Enviar</button>
+                            <!-- Asunto del mail que llega -->
+                            <input type="hidden" name="subject" value="Contacto desde el sitio" />
+                        </form>
+                    </section>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2026 Tienda de Chocolates Premium. Todos los derechos reservados.</p> 
+        </footer>        
+        
+    </body>
 </html>
