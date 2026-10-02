@@ -1,82 +1,138 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-        <!-- Enlace a styles en la carpeta css/ -->
-        <link rel="stylesheet" href="../css/styles.css" />
-        <title>Contacto</title>
-    </head>
+    <!-- Enlace a styles en la carpeta css/ -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Contacto</title>
+  </head>
 
-    <body>
-        <header>
-            <div class="div-logo"><a class="logo" href="../index.html">CHOCOLATES PREMIUM</a></div>
+  <body>
+    <header>
+      <div class="div-logo">
+        <a class="logo" href="../index.html">CHOCOLATES PREMIUM</a>
+      </div>
 
-            <nav class="header-nav">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="./contacto.html">Contacto</a></li>
-                    <li><a href="./carrito.html">Carrito</a></li>
-                </ul>
-            </nav>
-        </header>
+      <nav class="header-nav">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+          <li><a href="./carrito.html">Carrito</a></li>
+        </ul>
+      </nav>
+    </header>
 
-        <main>
-            <section>
-                <div class="hero">
-                    <h1 class="titulo">Contactanos</h1>
-                    <p class="parrafo">¿Tienes alguna duda sobre nuestros orígenes de cacao, coberturas o pedidos? Escríbenos y nuestro equipo te responderá a la brevedad.</p>
-                </div>
+    <main>
+      <section>
+        <div>
+          <h1 class="titulo">Contactanos</h1>
+          <p class="parrafo">
+            ¿Tienes alguna duda sobre nuestros orígenes de cacao, coberturas o
+            pedidos?
+          </p>
+          <p class="parrafo">
+            Escríbenos y nuestro equipo te responderá a la brevedad
+          </p>
+        </div>
 
-                <div>
-                    <!-- tarjeta 1: informacion de contacto -->
-                    <aside class="card-consulta">
-                        <h2>Nuestra Información</h2>
-                        <p>Lunes a Viernes: 9:00 - 18:00</p>
-                        <p>Sábados: 10:00 - 14:00</p>
-                        <p>Domingos y feriados: Cerrado</p>
-                    </aside>
-                    
-                    <!-- tarjeta 2: formulario de contacto -->
-                    <section class="card-consulta">
-                        <h2>Envianos tu mensaje</h2>
-                        <form class="form" action="https://formspree.io/f/xwpnleyj" method="POST">
-                            <div class="form-group">
-                                <label class="form-label">Nombre</label>
-                                <input class="form-input" type="text" name="name" placeholder="Ej. Juan Sanchez"/>
-                            </div>
+        <div class="contenedor-tarjetas">
+          <!-- tarjeta 1: informacion de contacto -->
+          <aside class="card-consulta">
+            <h2>Nuestra Información</h2>
+            <p>Lunes a Viernes: 9:00 - 18:00</p>
+            <p><a href="tel:+34123456789">+34 123 456 789</a></p>
+            <p><a href="mailto:info@chocolatespremium.com.ar">info@chocolatespremium.com.ar</a></p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.7283687265003!2d-58.53406538762816!3d-34.585739056437916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb7a2008e7d7d%3A0xd92119942a3319b2!2sCODELAND%20SA%20Chocolates%20Premium!5e0!3m2!1ses-419!2sar!4v1790982977957!5m2!1ses-419!2sar"
+              width="95%"
+              height="200"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </aside>
 
-                            <div class="form-group">
-                                <label class="form-label">Correo</label>
-                                <input class="form-input" type="email" name="email" placeholder="Ej.juan@gmail.com"/>
-                            </div>
+          <!-- tarjeta 2: formulario de contacto -->
+          <section class="card-consulta">
+            <h2>Envianos tu mensaje</h2>
+            <form
+              class="form"
+              action="https://formspree.io/f/xwpnleyj"
+              method="POST"
+            >
+              <div class="form-group">
+                <label class="form-label">Nombre</label>
+                <input
+                  class="form-input"
+                  type="text"
+                  name="name"
+                  placeholder="Ej. Juan Sanchez"
+                />
+              </div>
 
-                            <div class="form-group">
-                                <label class="form-label">Mensaje</label>
-                                <textarea class="form-textarea" name="message" placeholder="Escribe tu mensaje aquí..."></textarea>
-                            </div>
+              <div class="form-group">
+                <label class="form-label">Correo</label>
+                <input
+                  class="form-input"
+                  type="email"
+                  name="email"
+                  placeholder="Ej.juan@gmail.com"
+                />
+              </div>
 
-                            <button class="btn" type="submit">Enviar Mensaje</button>
-                            <!-- Asunto del mail que llega -->
-                            <input type="hidden" name="subject" value="Contacto desde el sitio" />
-                        </form>
-                    </section>
-                </div>
-            </section>
-        </main>
+              <div class="form-group">
+                <label class="form-label">Mensaje</label>
+                <textarea
+                  class="form-textarea"
+                  name="message"
+                  placeholder="Escribe tu mensaje aquí..."
+                ></textarea>
+              </div>
 
-        <footer>
-            <p>© 2026 Tienda de Chocolates Premium. Todos los derechos reservados.</p>
-            <nav>
-                <ul class="footer-list">
-                    <li><img src="../img/socialmedia/whatsapp-logo.png" alt="logo-whatsapp" /></li>
-                    <li><img src="../img/socialmedia/instagram-logo.png" alt="logo-instagram" /></li>
-                    <li><img src="../img/socialmedia/facebook-logo.png" alt="logo-facebook" /></li>
-                </ul>
-            </nav> 
-        </footer>        
-        
-    </body>
+              <button class="btn" type="submit">Enviar Mensaje</button>
+              <!-- Asunto del mail que llega -->
+              <input
+                type="hidden"
+                name="subject"
+                value="Contacto desde el sitio"
+              />
+            </form>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Tienda de Chocolates Premium. Todos los derechos reservados.</p>
+      <nav>
+        <ul class="footer-list">
+          <li>
+            <img
+              src="../img/socialmedia/whatsapp-logo.png"
+              alt="logo-whatsapp"
+            />
+          </li>
+          <li>
+            <img
+              src="../img/socialmedia/instagram-logo.png"
+              alt="logo-instagram"
+            />
+          </li>
+          <li>
+            <img
+              src="../img/socialmedia/facebook-logo.png"
+              alt="logo-facebook"
+            />
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
 </html>
