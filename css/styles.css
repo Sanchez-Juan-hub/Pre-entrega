@@ -215,6 +215,7 @@ nav ul {
 iframe {
     border-radius: 2rem;
     margin-top: 2rem;
+    width: 100%;
 }
 
 /* media queries. pantalla se adapta a partir de 768px */
@@ -222,13 +223,11 @@ iframe {
     
   header,
   footer {
-    /* display: flex; */
     flex-direction: column;
-    /* align-items: center; */
   }
 
   footer {
-    /* font-size: 1.4rem; */
+    font-size: 1.4rem;
     padding: 1rem 2rem;
   }
 
@@ -246,6 +245,14 @@ iframe {
     text-align: center;
   }
 
+  .logo {
+    padding-bottom: 0.5rem;
+  }
+
+  .header-nav a {
+    padding-top: 0.5rem;
+  }
+
   .header-nav,
   .footer-list {
     width: 100%;
@@ -259,11 +266,6 @@ iframe {
     gap: 1rem;
   }
 
-  .card-consulta {
-    width: 90vw;
-    padding: 2rem 1.5rem;
-  }
-
   .header-nav li,
   .footer-list li {
     text-align: center;
@@ -272,5 +274,10 @@ iframe {
   .contenedor-tarjetas {
     flex-direction: column;
     align-items: center;
+  }
+
+  .card-consulta {
+    width: 90vw;
+    padding: 2rem 1.5rem;
   }
 }
