@@ -10,6 +10,7 @@ html {
     font-size: 62.5%;
 }
 
+/* le quito el efecto de scroll horizontal en page contacto en celulares*/
 html,
 body {
     overflow-x: clip;
