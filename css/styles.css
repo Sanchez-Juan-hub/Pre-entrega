@@ -10,6 +10,11 @@ html {
     font-size: 62.5%;
 }
 
+html,
+body {
+    overflow-x: clip;
+}
+
 body {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 1.6rem;
@@ -220,7 +225,7 @@ iframe {
 
 /* media queries. pantalla se adapta a partir de 768px */
 @media (max-width: 768px) {
-    
+  
   header,
   footer {
     flex-direction: column;
