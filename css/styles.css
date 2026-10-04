@@ -220,10 +220,25 @@ iframe {
 /* media queries. pantalla se adapta a partir de 768px */
 @media (max-width: 768px) {
     
-  header{
-    display: flex;
+  header,
+  footer {
+    /* display: flex; */
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
+  }
+
+  footer {
+    /* font-size: 1.4rem; */
+    padding: 1rem 2rem;
+  }
+
+  .titulo {
+    font-size: 2.5rem;
+  }
+
+  .parrafo {
+    font-size: 1.5rem;
+    max-width: 90vw;
   }
 
   .div-logo {
@@ -231,28 +246,31 @@ iframe {
     text-align: center;
   }
 
-  .header-nav {
+  .header-nav,
+  .footer-list {
     width: 100%;
   }
 
-  .header-nav ul {
-    display: flex;
-    flex-direction: row;
+  .header-nav ul,
+  .footer-list {
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
     gap: 1rem;
   }
 
-  .header-nav li {
-    width: auto;
+  .card-consulta {
+    width: 90vw;
+    padding: 2rem 1.5rem;
+  }
+
+  .header-nav li,
+  .footer-list li {
     text-align: center;
   }
 
-  /* Cajas apiladas en columna */
   .contenedor-tarjetas {
     flex-direction: column;
     align-items: center;
-    padding: 0;
-    }
+  }
 }
