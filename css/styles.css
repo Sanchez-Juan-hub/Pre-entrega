@@ -25,7 +25,6 @@ main {
     width: 80%;
     margin: 0 auto;
     padding-bottom: 2rem;
-    /* padding: 4rem 0 6rem 0; */
 
     flex: 1;
     
@@ -115,7 +114,6 @@ nav ul {
 }
 
 /* inicio */
-
 .titulo {
     font-size: 3.5rem;
     font-family: "Cinzel", sans-serif;
@@ -156,20 +154,6 @@ nav ul {
     object-fit: cover;
 }
 
-
-
-/* .contenedor-tarjetas,
-.titulo-productos,
-.titulo,
-.parrafo {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-} */
-
-
-
 /* pagina de contacto */
 .card-consulta {
     width: 50rem;
@@ -180,6 +164,17 @@ nav ul {
     text-align: center;
     background-color: #ffffff;
     
+}
+
+.card-consulta a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: inherit;
+}
+
+.card-consulta a:hover {
+    color: #f1b747;
+    text-decoration: underline;
 }
 
 .form-group {
@@ -215,4 +210,49 @@ nav ul {
 .form-textarea {
     height: 10rem;
     resize: none;
+}
+
+iframe {
+    border-radius: 2rem;
+    margin-top: 2rem;
+}
+
+/* media queries. pantalla se adapta a partir de 768px */
+@media (max-width: 768px) {
+    
+  header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .div-logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .header-nav {
+    width: 100%;
+  }
+
+  .header-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .header-nav li {
+    width: auto;
+    text-align: center;
+  }
+
+  /* Cajas apiladas en columna */
+  .contenedor-tarjetas {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    }
 }
