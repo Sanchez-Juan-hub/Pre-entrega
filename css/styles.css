@@ -10,12 +10,6 @@ html {
     font-size: 62.5%;
 }
 
-/* le quito el efecto de scroll horizontal en page contacto en celulares*/
-html,
-body {
-    overflow-x: clip;
-}
-
 body {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 1.6rem;
@@ -152,10 +146,39 @@ nav ul {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.card .descripcion {
+    font-size: 1.6rem;
+    color: #5e4735;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.card .precio {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.card .btn {
+    font-size: 1.6rem;
+    padding: 1.6rem;
+    border-radius: 1rem;
+    margin-top: auto;
+    width: 80%;
 }
 
 .card img {
-    width: 20rem;
+    width: 100%;
     border-radius: 2rem;
     object-fit: cover;
 }
@@ -283,7 +306,7 @@ iframe {
   }
 
   .card-consulta {
-    width: 90vw;
+    width: 90%;
     padding: 2rem 1.5rem;
   }
 }
