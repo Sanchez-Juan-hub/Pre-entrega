@@ -44,3 +44,10 @@ const renderizarProductors = () => {
         
 };
 
+// El evento "DOMContentLoaded" sirve para que no lea un getElementById cuando aun no existe ese id.
+// Antes de que el navegador cree el nodo HTML, el codigo JS no puede acceder a ese nodo. Por eso se usa este evento.
+document.addEventListener("DOMContentLoaded", () => {
+    const carrito = obtenerCarrito();
+    actualizarContador(carrito);
+    renderizarProductors();
+});
