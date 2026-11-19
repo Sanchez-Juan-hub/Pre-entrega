@@ -1,4 +1,5 @@
-import { actualizarContador, mostrarMensaje } from "./ui-js";
+import { obtenerCarrito, guardarCarrito, vaciarCarritoStorage } from "./storage.js";
+import { actualizarContador, mostrarMensaje } from "./ui.js";
 
 export const agregarAlCarrito = (producto) => {
     //Usamos la funcion que pide el carrito al localStorage
