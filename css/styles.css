@@ -1,11 +1,14 @@
-/* limpiar y normalizar los estilos por defecto que los navegadores web aplican a todos los elementos de la página */
+/* ==========================================================================
+   RESET Y BASE
+   ========================================================================== */
+/* Limpia los estilos por defecto que aplican los navegadores */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* para hacer que 1rem equivalga exactamente 10 píxeles */
+/* Hace que 1rem equivalga a 10px */
 html {
     font-size: 62.5%;
 }
@@ -27,7 +30,7 @@ main {
     padding-bottom: 2rem;
 
     flex: 1;
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,26 +51,19 @@ h2 {
     margin: 3rem 0;
 }
 
-.btn {
-    border: none;
-    font-size: 1.6rem;
-    font-weight: 700;
-    padding: 1.6rem;
-    border-radius: 1rem;
-    color: #f1b747;
-    background-color: #26170b;
+iframe {
+    border-radius: 2rem;
+    margin-top: 2rem;
+    width: 100%;
 }
 
-.btn:hover {
-    cursor: pointer;
-    background-color: #f1b747;
-    color: #26170b;
-}
-
+/* ==========================================================================
+   HEADER Y FOOTER
+   ========================================================================== */
 header,
 footer {
     background: #26170b;
-    color:#f1b747;
+    color: #f1b747;
     width: 100%;
 
     display: flex;
@@ -104,16 +100,111 @@ nav ul {
 }
 
 .footer-list img {
-  width: 4rem;
-  padding: 0.5rem;
+    width: 4rem;
+    padding: 0.5rem;
 }
 
 .footer-list li {
-  padding: 1rem;
-  cursor: pointer;
+    padding: 1rem;
+    cursor: pointer;
 }
 
-/* inicio */
+/* ==========================================================================
+   COMPONENTES REUTILIZABLES
+   ========================================================================== */
+/* Boton principal */
+.btn {
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 1.6rem;
+    border-radius: 1rem;
+    color: #f1b747;
+    background-color: #26170b;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #f1b747;
+    color: #26170b;
+}
+
+/* Estilo compartido de tarjetas (productos y contacto) */
+.card,
+.card-consulta {
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #ffffff;
+}
+
+/* Toasts: contenedor fijo en pantalla */
+#contenedor-toasts {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    z-index: 1000;
+}
+
+/* Aviso: empieza invisible y desplazado */
+.toast {
+    background-color: #26170b;
+    color: #f1b747;
+    font-size: 1.6rem;
+    padding: 1.2rem 2rem;
+    border-radius: 0.6rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Estado visible */
+.toast-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Toast de confirmacion (con botones) */
+.toast-confirmacion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.toast-botones {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: flex-end;
+}
+
+.toast-btn {
+    padding: 0.6rem 1.4rem;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.toast-btn-confirmar {
+    background-color: #c0392b;
+    color: #ffffff;
+}
+
+.toast-btn-cancelar {
+    background-color: #ffffff;
+    color: #26170b;
+}
+
+/* ==========================================================================
+   PAGINA: INICIO
+   ========================================================================== */
 .titulo {
     font-size: 3.5rem;
     font-family: "Cinzel", sans-serif;
@@ -138,14 +229,9 @@ nav ul {
     flex-wrap: wrap;
 }
 
+/* Tarjeta de producto */
 .card {
     width: 30rem;
-    margin: 2rem;
-    padding: 1rem;
-    border-radius: 2rem;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -158,7 +244,6 @@ nav ul {
 }
 
 .card .descripcion {
-    font-size: 1.6rem;
     color: #5e4735;
     margin-bottom: 1rem;
     flex-grow: 1;
@@ -170,10 +255,8 @@ nav ul {
     margin-bottom: 2rem;
 }
 
+/* El resto de estilos del boton se heredan de .btn */
 .card .btn {
-    font-size: 1.6rem;
-    padding: 1.6rem;
-    border-radius: 1rem;
     margin-top: auto;
     width: 80%;
 }
@@ -184,46 +267,11 @@ nav ul {
     object-fit: cover;
 }
 
-/* Contenedor fijo en la esquina inferior derecha */
-#contenedor-toasts {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    z-index: 1000;
-}
-
-/* Aviso: empieza invisible y desplazado */
-.toast {
-    background-color: #26170b;
-    color: #f1b747;
-    font-size: 1.6rem;
-    padding: 12px 20px;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.3s, transform 0.3s;
-}
-
-/* Estado visible */
-.toast-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* pagina de contacto */
+/* ==========================================================================
+   PAGINA: CONTACTO
+   ========================================================================== */
 .card-consulta {
     width: 50rem;
-    margin: 2rem;
-    padding: 1rem;
-    border-radius: 2rem;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    background-color: #ffffff;
-    
 }
 
 .card-consulta a {
@@ -272,59 +320,56 @@ nav ul {
     resize: none;
 }
 
-iframe {
-    border-radius: 2rem;
-    margin-top: 2rem;
-    width: 100%;
-}
-
-/* pagina carrito */
-/* Layout de dos columnas: productos a la izquierda, resumen a la derecha */
+/* ==========================================================================
+   PAGINA: CARRITO
+   ========================================================================== */
+/* Dos columnas: productos a la izquierda, resumen a la derecha */
 .carrito-layout {
     display: grid;
-    grid-template-columns: 1fr 320px;
-    gap: 30px;
+    grid-template-columns: 1fr 32rem;
+    gap: 3rem;
     align-items: start;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    width: 100%;
+    max-width: 120rem;
+    padding: 2rem 0;
 }
 
 /* Encabezado y filas comparten las mismas columnas */
 .carrito-encabezado,
 .carrito-fila {
     display: grid;
-    grid-template-columns: 80px 1fr 100px 130px 110px 30px;
+    grid-template-columns: 8rem 1fr 11rem 13rem 12rem 3rem;
     align-items: center;
-    gap: 15px;
+    gap: 1.5rem;
 }
 
 .carrito-encabezado {
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ebd7bd;
+    font-size: 1.3rem;
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 0.85rem;
 }
 
 .carrito-fila {
-    padding: 15px 0;
-    border-bottom: 1px solid #ddd;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #ebd7bd;
 }
 
 .carrito-fila img {
-    width: 80px;
-    height: 80px;
+    width: 8rem;
+    height: 8rem;
     object-fit: contain;
 }
 
 .fila-nombre {
-    font-size: 0.95rem;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
 .fila-precio {
-    color: #777;
+    font-size: 1.5rem;
+    color: #5e4735;
 }
 
 .fila-subtotal {
@@ -335,36 +380,37 @@ iframe {
 .cantidad-control {
     display: flex;
     align-items: center;
-    border: 1px solid #ddd;
     width: fit-content;
+    border: 1px solid #ebd7bd;
 }
 
 .btn-cantidad {
-    width: 32px;
-    height: 36px;
+    width: 3.2rem;
+    height: 3.6rem;
     border: none;
-    background: #fff;
+    background: #ffffff;
+    font-size: 1.8rem;
     cursor: pointer;
-    font-size: 1.1rem;
 }
 
 .btn-cantidad:hover {
-    background: #f2f2f2;
+    background: #fff1d5;
 }
 
 .cantidad-valor {
-    width: 36px;
+    width: 3.6rem;
     text-align: center;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
-/* Boton X */
+/* Boton X para eliminar */
 .btn-eliminar-x {
     border: none;
     background: none;
+    font-size: 1.8rem;
+    color: #5e4735;
     cursor: pointer;
-    font-size: 1rem;
-    color: #555;
 }
 
 .btn-eliminar-x:hover {
@@ -372,41 +418,123 @@ iframe {
 }
 
 .acciones-carrito {
-    margin-top: 20px;
+    margin-top: 2rem;
+}
+
+.mensaje-carrito-vacio {
+    padding: 4rem 0;
+    text-align: center;
+    font-size: 2rem;
+    color: #5e4735;
 }
 
 /* Cuadro de resumen */
 .carrito-resumen {
-    border: 1px solid #ddd;
-    padding: 20px;
+    padding: 2rem;
+    border: 1px solid #ebd7bd;
 }
 
 .resumen-titulo {
-    margin-bottom: 15px;
-    font-size: 1rem;
+    margin: 0 0 1.5rem;
+    text-align: left;
+    font-size: 1.6rem;
     text-transform: uppercase;
 }
 
 .resumen-fila {
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ebd7bd;
+    font-size: 1.5rem;
 }
 
 .resumen-total {
-    font-size: 1.3rem;
-    font-weight: 700;
     border-bottom: none;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 .btn-continuar {
     width: 100%;
-    margin-top: 15px;
+    margin-top: 1.5rem;
 }
 
-/* En pantallas chicas: una sola columna y filas apiladas */
-@media (max-width: 900px) {
+/* Carrito vacio: una sola columna, sin encabezado ni resumen */
+.carrito-layout.carrito-vacio {
+    grid-template-columns: 1fr;
+}
+
+.carrito-layout.carrito-vacio .carrito-encabezado,
+.carrito-layout.carrito-vacio .carrito-resumen {
+    display: none;
+}
+
+/* ==========================================================================
+   RESPONSIVE: a partir de 768px
+   ========================================================================== */
+@media (max-width: 768px) {
+    header,
+    footer {
+        flex-direction: column;
+    }
+
+    footer {
+        font-size: 1.4rem;
+        padding: 1rem 2rem;
+    }
+
+    .titulo {
+        font-size: 2.5rem;
+    }
+
+    .parrafo {
+        font-size: 1.5rem;
+        max-width: 90vw;
+    }
+
+    .div-logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo {
+        padding-bottom: 0.5rem;
+    }
+
+    .header-nav a {
+        padding-top: 0.5rem;
+    }
+
+    .header-nav,
+    .footer-list {
+        width: 100%;
+    }
+
+    .header-nav ul,
+    .footer-list {
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .header-nav li,
+    .footer-list li {
+        text-align: center;
+    }
+
+    .contenedor-tarjetas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-consulta {
+        width: 90%;
+        padding: 2rem 1.5rem;
+    }
+
+    /* Carrito: una columna y cada producto en formato compacto */
     .carrito-layout {
         grid-template-columns: 1fr;
     }
@@ -416,75 +544,38 @@ iframe {
     }
 
     .carrito-fila {
-        grid-template-columns: 70px 1fr 30px;
+        grid-template-columns: 7rem 1fr auto;
+        grid-template-areas:
+            "img nombre   eliminar"
+            "img precio   eliminar"
+            "img cantidad subtotal";
+        gap: 0.5rem 1.5rem;
     }
 
     .carrito-fila img {
-        width: 70px;
-        height: 70px;
+        grid-area: img;
+        width: 7rem;
+        height: 7rem;
     }
-}
 
-/* media queries. pantalla se adapta a partir de 768px */
-@media (max-width: 768px) {
-  
-  header,
-  footer {
-    flex-direction: column;
-  }
+    .fila-nombre {
+        grid-area: nombre;
+    }
 
-  footer {
-    font-size: 1.4rem;
-    padding: 1rem 2rem;
-  }
+    .fila-precio {
+        grid-area: precio;
+    }
 
-  .titulo {
-    font-size: 2.5rem;
-  }
+    .cantidad-control {
+        grid-area: cantidad;
+    }
 
-  .parrafo {
-    font-size: 1.5rem;
-    max-width: 90vw;
-  }
+    .fila-subtotal {
+        grid-area: subtotal;
+    }
 
-  .div-logo {
-    width: 100%;
-    text-align: center;
-  }
-
-  .logo {
-    padding-bottom: 0.5rem;
-  }
-
-  .header-nav a {
-    padding-top: 0.5rem;
-  }
-
-  .header-nav,
-  .footer-list {
-    width: 100%;
-  }
-
-  .header-nav ul,
-  .footer-list {
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 1rem;
-  }
-
-  .header-nav li,
-  .footer-list li {
-    text-align: center;
-  }
-
-  .contenedor-tarjetas {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card-consulta {
-    width: 90%;
-    padding: 2rem 1.5rem;
-  }
+    .btn-eliminar-x {
+        grid-area: eliminar;
+        align-self: start;
+    }
 }

@@ -121,6 +121,9 @@ const renderizarResumen = (carrito) => {
 
 const renderizarCarrito = () => {
     const carrito = obtenerCarrito();
+    // Si el carrito está vacío, marcamos el layout para que el CSS oculte encabezado y resumen
+    const layout = document.querySelector(".carrito-layout");
+    layout.classList.toggle("carrito-vacio", !carrito.length);
     actualizarContador(carrito);
 
     const contenedor = document.getElementById("contenedor-carrito");
@@ -150,9 +153,11 @@ const renderizarCarrito = () => {
     const btnVaciar = document.createElement("button");
     btnVaciar.classList.add("btn", "btn-vaciar-carrito");
     btnVaciar.textContent = "Vaciar carrito";
-    btnVaciar.addEventListener("click", () => {
-        vaciarCarrito();
-        renderizarCarrito();
+    btnVaciar.addEventListener("click", async () => {
+        const vaciado = await vaciarCarrito(); // espera a que el usuario confirme o cancele
+        if (vaciado) {
+            renderizarCarrito();
+        }
     });
     divAcciones.appendChild(btnVaciar);
 

@@ -1,5 +1,5 @@
 import { obtenerCarrito, guardarCarrito, vaciarCarritoStorage } from "./storage.js";
-import { actualizarContador, mostrarMensaje } from "./ui.js";
+import { actualizarContador, mostrarMensaje, confirmarAccion } from "./ui.js";
 
 export const agregarAlCarrito = (producto) => {
     //Usamos la funcion que pide el carrito al localStorage
@@ -45,12 +45,13 @@ export const cambiarCantidad = (id, cambio) => {
     actualizarContador(carrito);
 };
 
-export const vaciarCarrito = () => {
-    const confirmacion = confirm("¿Estás seguro de que deseas vaciar el carrito?");
-    if (confirmacion) {
-        vaciarCarritoStorage();
-        actualizarContador([]);
-        mostrarMensaje("Carrito vaciado");
-        return;
-    }
+// Pide confirmación con un toast; devuelve true si se vació y false si se canceló
+export const vaciarCarrito = async () => {
+    const confirmado = await confirmarAccion("¿Seguro que querés vaciar el carrito?");
+    if (!confirmado) return false;
+
+    vaciarCarritoStorage();
+    actualizarContador([]);
+    mostrarMensaje("Carrito vaciado");
+    return true;
 };
