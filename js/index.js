@@ -1,9 +1,10 @@
+// Importante las funcionas para enviar objetos al array
 import { obtenerCarrito } from "./storage.js";
 import { actualizarContador } from "./ui.js";
 import { agregarAlCarrito } from "./funcionesCarrito.js";
 
 // Funcion que renderiza los productos en la pagina principal en contenedor-tarjetas, obteniendo los datos de productos.json
-const renderizarProductors = () => {
+const renderizarProductos = () => {
     // Tomamos el div para meter las tarjetas de los productos
     const contenedor = document.getElementById("contenedor-tarjetas");
 
@@ -22,6 +23,9 @@ const renderizarProductors = () => {
         
                 const titulo = document.createElement("h3");
                 titulo.textContent = producto.nombre;
+
+                const descripcion = document.createElement("p");
+                descripcion.textContent = producto.descripcion;
         
                 const precio = document.createElement("p");
                 precio.textContent = `$${producto.precio}`;
@@ -37,7 +41,7 @@ const renderizarProductors = () => {
                 // Armar la estructura
                 tarjeta.appendChild(img);
                 tarjeta.appendChild(titulo);
-                // descripcion falta
+                tarjeta.appendChild(descripcion);
                 tarjeta.appendChild(precio);
                 tarjeta.appendChild(boton);
         
@@ -53,5 +57,5 @@ const renderizarProductors = () => {
 document.addEventListener("DOMContentLoaded", () => {
     const carrito = obtenerCarrito();
     actualizarContador(carrito);
-    renderizarProductors();
+    renderizarProductos();
 });
