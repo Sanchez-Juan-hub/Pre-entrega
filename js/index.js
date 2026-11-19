@@ -1,3 +1,7 @@
+import { obtenerCarrito } from "./storage.js";
+import { actualizarContador } from "./ui.js";
+import { agregarAlCarrito } from "./funcionesCarrito.js";
+
 // Funcion que renderiza los productos en la pagina principal en contenedor-tarjetas, obteniendo los datos de productos.json
 const renderizarProductors = () => {
     // Tomamos el div para meter las tarjetas de los productos
