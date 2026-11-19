@@ -1,0 +1,130 @@
+[
+  {
+    "id": "1",
+    "nombre": "Licor de Cacao",
+    "descripcion": "Producto obtenido mediante la molienda de semillas de cacao previamente descascaradas y tostadas.",
+    "precio": 5000,
+    "img": "img/licor-de-cacao-1kg.jpg",
+    "categoria": "Derivados del Cacao"
+  },
+  {
+    "id": "2",
+    "nombre": "Manteca de Cacao",
+    "descripcion": "Producto proveniente del prensado del licor de cacao.",
+    "precio": 4000,
+    "img": "img/manteca-de-cacao-x-1-kg.jpg",
+    "categoria": "Derivados del Cacao"
+  },
+  {
+    "id": "3",
+    "nombre": "Cacao Amargo Alcalino",
+    "descripcion": "Cacao amargo alcalino, 100% puro sin agregado de azúcar ni colorantes.",
+    "precio": 3000,
+    "img": "img/cacao-amargo-alcalino.jpg",
+    "categoria": "Derivados del Cacao"
+  },
+  {
+    "id": "4",
+    "nombre": "Cacao Amargo Natural",
+    "descripcion": "Cacao amargo, 100% natural. No alcalino. Sin agregado de azúcares ni colorantes.",
+    "precio": 3000,
+    "img": "img/cacao-amargo-natural.jpg",
+    "categoria": "Derivados del Cacao"
+  },
+  {
+    "id": "5",
+    "nombre": "Chocolate Salgado Amargo 88% Esmeralda",
+    "descripcion": "Delicioso Chocolate 88% amargo, realizado por una selección de granos de cacao ecuatorianos.",
+    "precio": 2000,
+    "img": "img/salgado/chocolate-amargo-88_-esmeralda-salgado-x-1kg-1.jpg",
+    "categoria": "Chocolates Amargos"
+  },
+  {
+    "id": "6",
+    "nombre": "Chocolate Codeland Amargo 80%",
+    "descripcion": "Chocolate amargo Premium al 80% en medallones.",
+    "precio": 2000,
+    "img": "img/codeland/chocolate-amargo-codeland-1-kg.jpg",
+    "categoria": "Chocolates Amargos"
+  },
+  {
+    "id": "7",
+    "nombre": "Chocolate Salgado Amargo 76% Apurimac",
+    "descripcion": "Delicioso Chocolate 76% Amargo, realizado por una selección de granos de cacao peruanos.",
+    "precio": 2000,
+    "img": "img/salgado/chocolate-amargo-76_-apurimac-salgado-x-1kg-1.jpg",
+    "categoria": "Chocolates Amargos"
+  },
+  {
+    "id": "8",
+    "nombre": "Chocolate Fenix Cobertura Amargo 70%",
+    "descripcion": "Ideal chocolate de cobertura que cuenta con un 70% cacao y con aportes de azucar.",
+    "precio": 2000,
+    "img": "img/fenix/chocolate-fenix-cobertura-amargo-70-1-kg.jpg",
+    "categoria": "Chocolates Amargos"
+  },
+  {
+    "id": "9",
+    "nombre": "Chocolate Salgado Amargo 67% Sur del Lago",
+    "descripcion": "Delicioso Chocolate 67% amargo, realizado por una selección de granos de cacao venezolanos.",
+    "precio": 2000,
+    "img": "img/salgado/chocolate-amargo-67_-sur-del-lago-salgado-x-1-kg-1.jpg",
+    "categoria": "Chocolates Amargos"
+  },
+  {
+    "id": "10",
+    "nombre": "Chocolate Fenix Semi Amargo 60%",
+    "descripcion": "Ideal chocolate de cobertura que cuenta con un 60% cacao y con aportes de azucar.",
+    "precio": 2000,
+    "img": "img/fenix/chocolate-fenix-cobertura-semiamargo-60-1-kg.jpg",
+    "categoria": "Chocolates Semi Amargos"
+  },
+  {
+    "id": "11",
+    "nombre": "Chocolate Codeland Semi Amargo 56%",
+    "descripcion": "Ideal chocolate de cobertura que cuenta con un 56% cacao y con aportes de azucar.",
+    "precio": 2000,
+    "img": "img/codeland/chocolate-semiamargo-codeland-x-1-kg.jpg",
+    "categoria": "Chocolates Semi Amargos"
+  },
+  {
+    "id": "12",
+    "nombre": "Chocolate Fenix con Leche 36%",
+    "descripcion": "Ideal chocolate de cobertura que cuenta con un 36% cacao y con aportes de azucar.",
+    "precio": 2000,
+    "img": "img/fenix/chocolate-fenix-cobertura-con-leche-36-1-kg.jpg",
+    "categoria": "Chocolates con Leche"
+  },
+  {
+    "id": "13",
+    "nombre": "Chocolate Salgado con Leche 33% Sur del Lago",
+    "descripcion": "Delicioso Chocolate con leche con 33% de cacao, realizado por una selección de granos de cacao bolivianos.",
+    "precio": 2000,
+    "img": "img/salgado/chocolate-con-leche-33_-moxos-salgado-x-1-kg-1.jpg",
+    "categoria": "Chocolates con Leche"
+  },
+  {
+    "id": "14",
+    "nombre": "Chocolate Codeland con Leche 35%",
+    "descripcion": "Botones de chocolate con leche de excelente calidad.",
+    "precio": 2000,
+    "img": "img/codeland/chocolate-con-leche-codeland-x-1-kg.jpg",
+    "categoria": "Chocolates con Leche"
+  },
+  {
+    "id": "15",
+    "nombre": "Chocolate Fenix Blanco 30%",
+    "descripcion": "Ideal chocolate de cobertura que cuenta con un 30% cacao y con aportes de azucar.",
+    "precio": 2000,
+    "img": "img/fenix/chocolate-fenix-cobertura-blanco-30-1-kg.jpg",
+    "categoria": "Chocolates Blancos"
+  },
+  {
+    "id": "16",
+    "nombre": "Chocolate Codeland Blanco",
+    "descripcion": "Botones de chocolate blanco de excelente calidad.",
+    "precio": 2000,
+    "img": "img/codeland/chocolate-codeland-blanco-x-1-kg-1.jpg",
+    "categoria": "Chocolates Blancos"
+  }
+]
