@@ -6,7 +6,7 @@ export const actualizarContador = (carrito) => {
     }
 }
 
-// Busca el contenedor de toasts; si no existe, lo crea una sola vez
+// Busca el contenedor de toasts; si no existe, lo crea una sola vez por las dudas
 const obtenerContenedorToasts = () => {
     let contenedor = document.getElementById('contenedor-toasts');
     if (!contenedor) {
@@ -17,7 +17,7 @@ const obtenerContenedorToasts = () => {
     return contenedor;
 }
 
-// Aviso discreto que desaparece solo
+// Aviso que desaparece solo
 export const mostrarMensaje = (texto) => {
     const contenedor = obtenerContenedorToasts();
 
@@ -36,12 +36,12 @@ export const mostrarMensaje = (texto) => {
     }, 2000);
 }
 
-// Toast (notificacion tipo popup que desaparece a los segundos) con botones Confirmar / Cancelar. Devuelve una promesa: true si confirma, false si cancela
+// Toast (notificacion tipo popup que desaparece a los segundos) con botones confirmar y cancelar. Devuelve una promesa: true si confirma, false si cancela
 export const confirmarAccion = (texto) => {
     return new Promise((resolve) => {
         const contenedor = obtenerContenedorToasts();
 
-        // Si ya hay una confirmación abierta, no creamos otra
+        // Si ya hay una confirmación abierta, no creamos otra para que no se acumulen y se confunda el usuario
         if (contenedor.querySelector('.toast-confirmacion')) {
             resolve(false);
             return;

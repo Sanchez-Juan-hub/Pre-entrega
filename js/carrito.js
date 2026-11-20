@@ -5,7 +5,7 @@ import { actualizarContador, mostrarMensaje } from "./ui.js";
 // Da formato a los precios: 18000 -> $18.000
 const formatearPrecio = (valor) => `$${valor.toLocaleString("es-AR")}`;
 
-// Crea la fila de un producto
+// Creo una funcion crearfila personalizada para armar la fila de un producto
 const crearFila = (producto) => {
     const fila = document.createElement("article");
     fila.classList.add("carrito-fila");
@@ -25,7 +25,7 @@ const crearFila = (producto) => {
     precio.classList.add("fila-precio");
     precio.textContent = formatearPrecio(producto.precio);
 
-    // Control de cantidad: boton "-", numero y boton "+"
+    // Esto para agregar y restar productos con boton -, numero y boton +
     const control = document.createElement("div");
     control.classList.add("cantidad-control");
 
@@ -33,7 +33,7 @@ const crearFila = (producto) => {
     btnMenos.classList.add("btn-cantidad");
     btnMenos.textContent = "−";
     btnMenos.addEventListener("click", () => {
-        cambiarCantidad(producto.id, -1);
+        cambiarCantidad(producto.id, -1); //resto 1 unidad
         renderizarCarrito();
     });
 
@@ -45,7 +45,7 @@ const crearFila = (producto) => {
     btnMas.classList.add("btn-cantidad");
     btnMas.textContent = "+";
     btnMas.addEventListener("click", () => {
-        cambiarCantidad(producto.id, 1);
+        cambiarCantidad(producto.id, 1); //sumo 1 unidad
         renderizarCarrito();
     });
 
@@ -66,7 +66,7 @@ const crearFila = (producto) => {
         renderizarCarrito();
     });
 
-    // Armamos la fila en el orden de las columnas
+    // Esta linea para armar la fila en el orden de las columnas
     fila.append(img, nombre, precio, control, subtotal, btnEliminar);
     return fila;
 };
@@ -79,7 +79,7 @@ const renderizarResumen = (carrito) => {
     // Suma de precio x cantidad de todos los productos
     const subtotal = carrito.reduce((acc, p) => acc + p.precio * p.cantidad, 0);
 
-    // Titulo
+    // Titulo de la parte derecha donde dice resumen
     const titulo = document.createElement("h2");
     titulo.classList.add("resumen-titulo");
     titulo.textContent = "Resumen";
@@ -96,7 +96,7 @@ const renderizarResumen = (carrito) => {
 
     filaSubtotal.append(etiquetaSubtotal, valorSubtotal);
 
-    // Fila de total (por ahora igual al subtotal; aca se pueden sumar envio o descuentos)
+    // Fila de total (por ahora igual al subtotal, (se podria agregar tipo costo de envio o descuento, cupon o algo parecido)
     const filaTotal = document.createElement("div");
     filaTotal.classList.add("resumen-fila", "resumen-total");
 
@@ -113,7 +113,7 @@ const renderizarResumen = (carrito) => {
     btnContinuar.classList.add("btn", "btn-continuar");
     btnContinuar.textContent = "Continuar compra";
     btnContinuar.addEventListener("click", () => {
-        mostrarMensaje("Funcionalidad en construcción");
+        mostrarMensaje("Página en construcción");
     });
 
     resumen.append(titulo, filaSubtotal, filaTotal, btnContinuar);
@@ -121,7 +121,7 @@ const renderizarResumen = (carrito) => {
 
 const renderizarCarrito = () => {
     const carrito = obtenerCarrito();
-    // Si el carrito está vacío, marcamos el layout para que el CSS oculte encabezado y resumen
+    // Si el carrito está vacío, lo marco con el layout para que el CSS oculte encabezado y resumen porque no encontré otra forma de hacerlo. Verificar otra forma de hacerlo.
     const layout = document.querySelector(".carrito-layout");
     layout.classList.toggle("carrito-vacio", !carrito.length);
     actualizarContador(carrito);
@@ -130,12 +130,12 @@ const renderizarCarrito = () => {
     const divAcciones = document.getElementById("acciones-carrito");
     const resumen = document.getElementById("resumen-carrito");
 
-    // Limpiamos lo renderizado antes
+    // Limpieza
     contenedor.innerHTML = "";
     divAcciones.innerHTML = "";
     resumen.innerHTML = "";
 
-    // Carrito vacio: mostramos mensaje y cortamos
+    // Carrito vacio
     if (!carrito.length) {
         const mensaje = document.createElement("p");
         mensaje.classList.add("mensaje-carrito-vacio");

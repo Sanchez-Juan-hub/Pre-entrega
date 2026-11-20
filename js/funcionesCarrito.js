@@ -10,10 +10,10 @@ export const agregarAlCarrito = (producto) => {
         existente.cantidad++;
     } else {
         carrito.push({ ...producto, cantidad: 1 }); 
-        // copia del producto + cantidad
+        // hace una copia del producto + cantidad
     }
 
-    //Usamos la funcion que guarda el carrito en el localStorage
+    // Usamos la funcion que guarda el carrito en el localStorage
     guardarCarrito(carrito);
 
     // Usamos la funcion UI que actualiza en numero en carrito
@@ -22,13 +22,13 @@ export const agregarAlCarrito = (producto) => {
 };
 
 export const eliminarProducto = (id) => {
-    // Eliminar un elemento del carrito array por su id
+    // Elimino un elemento del carrito array por su id
     const carrito = obtenerCarrito().filter ((item) => item.id !== id);
 
-    // Actualizamos el carrito en el localStorage
+    // Actualizo el carrito en el localStorage
     guardarCarrito(carrito);
 
-    // Actualizamos el contador
+    // Actualizo el contador
     actualizarContador(carrito);
     mostrarMensaje("Producto eliminado");
 };

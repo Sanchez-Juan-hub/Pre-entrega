@@ -140,10 +140,10 @@ nav ul {
     background-color: #ffffff;
 }
 
-/* Toasts: contenedor fijo en pantalla */
+/* Toasts (la notificacion al click) queda como un contenedor fijo en pantalla */
 #contenedor-toasts {
     position: fixed;
-    bottom: 2rem;
+    top: 8rem;
     right: 2rem;
     display: flex;
     flex-direction: column;
@@ -164,7 +164,7 @@ nav ul {
     transition: opacity 0.3s, transform 0.3s;
 }
 
-/* Estado visible */
+/* Este es para cuando es visible */
 .toast-visible {
     opacity: 1;
     transform: translateY(0);
@@ -460,7 +460,7 @@ nav ul {
     margin-top: 1.5rem;
 }
 
-/* Carrito vacio: una sola columna, sin encabezado ni resumen */
+/* Este es para el carrito vacio con una sola columna, sin encabezado ni resumen solo dice tu carirto esta vacio */
 .carrito-layout.carrito-vacio {
     grid-template-columns: 1fr;
 }
@@ -471,7 +471,7 @@ nav ul {
 }
 
 /* ==========================================================================
-   RESPONSIVE: a partir de 768px
+   Esto para el responsive a partir de 768px
    ========================================================================== */
 @media (max-width: 768px) {
     header,
@@ -534,7 +534,7 @@ nav ul {
         padding: 2rem 1.5rem;
     }
 
-    /* Carrito: una columna y cada producto en formato compacto */
+    /* En el carrito una columna y cada producto tipo compacto */
     .carrito-layout {
         grid-template-columns: 1fr;
     }
