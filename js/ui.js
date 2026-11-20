@@ -2,7 +2,8 @@
 export const actualizarContador = (carrito) => {
     const contador = document.getElementById('contador-carrito');
     if (contador) {
-        contador.textContent = carrito.reduce((acc, producto) => acc + (producto.cantidad ?? 1), 0);
+        // Suma las unidades de cada producto; si el total es 0, deja el texto vacío
+        contador.textContent = carrito.reduce((acc, producto) => acc + (producto.cantidad ?? 1), 0) || "";
     }
 }
 
